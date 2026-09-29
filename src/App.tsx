@@ -671,10 +671,10 @@ export default function WeddingInvitation() {
             <section className="cv-auto py-24 md:py-32 w-full flex flex-col items-center px-4 relative">
               <div className="section-floral-overlay absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
                 {/* Silver Orchids in Corners */}
-                <InviteImage src={flowerImage} className="absolute -left-12 -top-12 w-[220px] md:w-[380px] h-auto opacity-100 object-contain -rotate-[105deg]" alt="" />
-                <InviteImage src={flowerImage} className="absolute -right-12 -top-12 w-[220px] md:w-[380px] h-auto opacity-100 object-contain -rotate-[15deg]" alt="" />
+                <InviteImage src="/ChatGPT_Image_Sep_29__2026__06_45_56_PM-removebg-preview.png" className="absolute top-0 left-0 w-[280px] md:w-[450px] h-auto opacity-100 object-contain" alt="" />
+                <InviteImage src={flowerImage} className="absolute -right-12 -top-12 w-[220px] md:w-[380px] h-auto opacity-100 object-contain rotate-[165deg] -scale-x-100 -scale-y-100" alt="" />
                 <InviteImage src={flowerImage} className="absolute -left-12 -bottom-12 w-[220px] md:w-[380px] h-auto opacity-100 object-contain rotate-[165deg]" alt="" />
-                <InviteImage src={flowerImage} className="absolute -right-12 -bottom-12 w-[220px] md:w-[380px] h-auto opacity-100 object-contain rotate-[75deg]" alt="" />
+                <InviteImage src="/ChatGPT_Image_Sep_29__2026__06_54_50_PM-removebg-preview.png" className="absolute bottom-0 right-0 w-[280px] md:w-[450px] h-auto opacity-100 object-contain" alt="" />
               </div>
 
               <div className="max-w-[1000px] w-full flex flex-col items-center text-center relative z-10">
@@ -909,10 +909,10 @@ export default function WeddingInvitation() {
                         <span className="text-theme-600 font-bold uppercase tracking-[0.4em] text-[9px] md:text-[11px]">The Venue</span>
                       </div>
                       <h2 className="font-cinzel text-[2.5rem] sm:text-[3rem] md:text-[4.5rem] text-theme-900 leading-[1] drop-shadow-sm ml-[-4px] uppercase tracking-[0.15em] font-bold">
-                        Crystal Atrium
+                        Paradise Inn Bolgoda
                       </h2>
                       <p className="font-playball text-[1.5rem] sm:text-[1.8rem] md:text-[2.5rem] text-theme-600 italic leading-[1.2] ml-[-2px]">
-                        Paradise Inn Bolgoda
+                        Crystal Atrium
                       </p>
                     </div>
 
@@ -1064,8 +1064,6 @@ export default function WeddingInvitation() {
               <div className="absolute inset-0 opacity-[0.03] paper-grain pointer-events-none" />
 
               <section className="cv-auto py-24 md:py-36 relative flex flex-col items-center overflow-hidden">
-                <InviteImage src={flowerImage} alt="" className="absolute top-0 right-0 w-[40vw] max-w-[500px] opacity-[0.5] translate-x-1/3 -translate-y-1/3 pointer-events-none" />
-                <InviteImage src={flowerImage} alt="" className="absolute bottom-16 left-1/2 w-[38vw] max-w-[360px] opacity-[0.45] -translate-x-1/2 pointer-events-none" />
 
                 <div className="container mx-auto px-4 max-w-4xl text-center relative z-10 w-full">
                   <motion.div
