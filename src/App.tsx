@@ -4,7 +4,7 @@ import { Sparkles, MapPin, Calendar, Clock } from "lucide-react";
 
 /**
  * Sinhala Traditional Wedding Invitation Theme
- * Names: Navin & Chavindri
+ * Names: Chavindri & Navin
  * Background: White
  * Accents: Blue
  */
@@ -412,7 +412,7 @@ export default function WeddingInvitation() {
             {/* Monogram with color accent */}
             <div className="absolute top-12 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
               <p className="font-cinzel text-[11px] tracking-[0.8em] font-bold uppercase flex flex-col items-center gap-3">
-                <span className="bg-gradient-to-r from-theme-400 via-theme-500 to-theme-400 bg-clip-text text-transparent opacity-80">N & C</span>
+                <span className="bg-gradient-to-r from-theme-400 via-theme-500 to-theme-400 bg-clip-text text-transparent opacity-80">C & N</span>
                 <span className="h-px w-8 bg-gradient-to-r from-transparent via-stone-300 to-transparent" />
               </p>
             </div>
@@ -452,7 +452,7 @@ export default function WeddingInvitation() {
                 transition={{ duration: 2, ease: "easeOut" }}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-cinzel text-[40vw] text-theme-900 pointer-events-none whitespace-nowrap leading-none select-none z-0"
               >
-                N&C
+                C&N
               </motion.div>
 
               {/* Central Content Container */}
@@ -475,7 +475,7 @@ export default function WeddingInvitation() {
                       transition={{ delay: 1, duration: 0.8 }}
                       className="font-playball text-[3rem] sm:text-[3.5rem] md:text-[5rem] text-stone-800 leading-[1.1] drop-shadow-sm"
                     >
-                      Navin
+                      Chavindri
                     </motion.h1>
                     <motion.div
                       initial={{ scale: 0 }}
@@ -491,7 +491,7 @@ export default function WeddingInvitation() {
                       transition={{ delay: 1.4, duration: 0.8 }}
                       className="font-playball text-[3rem] sm:text-[3.5rem] md:text-[5rem] text-stone-800 leading-[1.1] drop-shadow-sm"
                     >
-                      Chavindri
+                      Navin
                     </motion.h1>
 
                     <motion.div
@@ -588,7 +588,6 @@ export default function WeddingInvitation() {
                     </div>
                     <div className="w-1/2 text-left space-y-2">
                       <h3 className="font-serif text-[24px] md:text-3xl text-stone-800 leading-[1.1]">Once<br />Upon a Time</h3>
-                      <p className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-theme-400">8 Years Old</p>
                       <div className="flex items-center gap-3 pt-2">
                         <div className="w-1.5 h-1.5 rotate-45 bg-theme-400" />
                         <div className="h-[1px] w-16 bg-gradient-to-r from-theme-300 to-transparent" />
@@ -672,10 +671,10 @@ export default function WeddingInvitation() {
             <section className="cv-auto py-24 md:py-32 w-full flex flex-col items-center px-4 relative">
               <div className="section-floral-overlay absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
                 {/* Silver Orchids in Corners */}
-                <InviteImage src={flowerImage} className="absolute -left-12 -top-12 w-[220px] md:w-[380px] h-auto opacity-70 object-contain -rotate-[105deg]" alt="" />
-                <InviteImage src={flowerImage} className="absolute -right-12 -top-12 w-[220px] md:w-[380px] h-auto opacity-70 object-contain -rotate-[15deg]" alt="" />
-                <InviteImage src={flowerImage} className="absolute -left-12 -bottom-12 w-[220px] md:w-[380px] h-auto opacity-70 object-contain rotate-[165deg]" alt="" />
-                <InviteImage src={flowerImage} className="absolute -right-12 -bottom-12 w-[220px] md:w-[380px] h-auto opacity-70 object-contain rotate-[75deg]" alt="" />
+                <InviteImage src={flowerImage} className="absolute -left-12 -top-12 w-[220px] md:w-[380px] h-auto opacity-100 object-contain -rotate-[105deg]" alt="" />
+                <InviteImage src={flowerImage} className="absolute -right-12 -top-12 w-[220px] md:w-[380px] h-auto opacity-100 object-contain -rotate-[15deg]" alt="" />
+                <InviteImage src={flowerImage} className="absolute -left-12 -bottom-12 w-[220px] md:w-[380px] h-auto opacity-100 object-contain rotate-[165deg]" alt="" />
+                <InviteImage src={flowerImage} className="absolute -right-12 -bottom-12 w-[220px] md:w-[380px] h-auto opacity-100 object-contain rotate-[75deg]" alt="" />
               </div>
 
               <div className="max-w-[1000px] w-full flex flex-col items-center text-center relative z-10">
@@ -717,14 +716,14 @@ export default function WeddingInvitation() {
                       src={brideGroomImage}
                       alt="Bride and groom wedding illustration"
                       loading="eager"
-                      className="w-[200px] h-[240px] md:w-[270px] md:h-[320px] object-cover rounded-[1.6rem] border border-theme-100"
+                      className="w-[200px] md:w-[270px] h-auto rounded-[1.6rem] border border-theme-100"
                     />
                   </div>
                 </motion.div>
 
                 <div className="relative w-full flex flex-col md:flex-row items-center justify-center md:items-stretch gap-6 md:gap-10 my-12 md:my-20 z-10 px-2 lg:px-8">
 
-                  {/* Vishan's Card */}
+                  {/* Chavindri's Card */}
                   <motion.div
                     initial={{ opacity: 0, x: -30, y: 20 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -735,10 +734,10 @@ export default function WeddingInvitation() {
                     <div className="absolute inset-0 opacity-[0.02] paper-grain pointer-events-none" />
                     <div className="relative z-10 space-y-4 py-8 md:py-12">
                       <div className="space-y-2">
-                        <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Beloved son of</p>
-                        <p className="text-[13px] md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mr. Nandana Kumara<br />& Mrs. Girly Wijerathna</p>
+                        <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Beloved daughter of</p>
+                        <p className="text-[13px] md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mr. Mahesh Karunarathne<br />& Mrs. Ajantha Manawadu</p>
                       </div>
-                      <h3 className="text-[49px] md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Navin</h3>
+                      <h3 className="text-[49px] md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Chavindri</h3>
                     </div>
                   </motion.div>
 
@@ -757,7 +756,7 @@ export default function WeddingInvitation() {
                     <div className="hidden md:block w-px h-32 bg-gradient-to-b from-theme-300 to-transparent" />
                   </div>
 
-                  {/* Nathasha's Card - Offset structurally on desktop */}
+                  {/* Navin's Card - Offset structurally on desktop */}
                   <motion.div
                     initial={{ opacity: 0, x: 30, y: 20 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -769,10 +768,10 @@ export default function WeddingInvitation() {
                     <div className="absolute inset-0 opacity-[0.02] paper-grain pointer-events-none" />
                     <div className="relative z-10 space-y-4 py-8 md:py-12">
                       <div className="space-y-2">
-                        <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Beloved daughter of</p>
-                        <p className="text-[13px] md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mr. Mahesh Karunarathne<br />& Mrs. Ajantha Manawadu</p>
+                        <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Beloved son of</p>
+                        <p className="text-[13px] md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mr. Nandana Kumara<br />& Mrs. Girly Wijerathna</p>
                       </div>
-                      <h3 className="text-[49px] md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Chavindri</h3>
+                      <h3 className="text-[49px] md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Navin</h3>
                     </div>
                   </motion.div>
                 </div>
@@ -909,9 +908,12 @@ export default function WeddingInvitation() {
                         <div className="w-10 h-[2px] bg-theme-500 shadow-[0_0_8px_rgba(192,192,192,0.4)]" />
                         <span className="text-theme-600 font-bold uppercase tracking-[0.4em] text-[9px] md:text-[11px]">The Venue</span>
                       </div>
-                      <h2 className="font-playball text-[3.5rem] sm:text-[4rem] md:text-[5.5rem] text-theme-900 leading-[1] drop-shadow-sm ml-[-4px]">
-                        Paradise Inn Bolgoda
+                      <h2 className="font-cinzel text-[2.5rem] sm:text-[3rem] md:text-[4.5rem] text-theme-900 leading-[1] drop-shadow-sm ml-[-4px] uppercase tracking-[0.15em] font-bold">
+                        Crystal Atrium
                       </h2>
+                      <p className="font-playball text-[1.5rem] sm:text-[1.8rem] md:text-[2.5rem] text-theme-600 italic leading-[1.2] ml-[-2px]">
+                        Paradise Inn Bolgoda
+                      </p>
                     </div>
 
                     <div className="space-y-6 pt-4 relative">
@@ -922,7 +924,7 @@ export default function WeddingInvitation() {
                           <MapPin className="w-4 h-4 text-theme-500" />
                         </div>
                         <p className="text-[19px] md:text-xl text-stone-700 font-cinzel font-medium leading-relaxed tracking-wide">
-                          Crystal atrium,<br /> Sri Lanka.
+                          Piliyandala, Sri Lanka.
                         </p>
                       </div>
 
@@ -1062,8 +1064,8 @@ export default function WeddingInvitation() {
               <div className="absolute inset-0 opacity-[0.03] paper-grain pointer-events-none" />
 
               <section className="cv-auto py-24 md:py-36 relative flex flex-col items-center overflow-hidden">
-                <InviteImage src={flowerImage} alt="" className="absolute top-0 right-0 w-[40vw] max-w-[500px] opacity-[0.06] translate-x-1/3 -translate-y-1/3 pointer-events-none" />
-                <InviteImage src={flowerImage} alt="" className="absolute bottom-16 left-1/2 w-[38vw] max-w-[360px] opacity-[0.1] -translate-x-1/2 pointer-events-none" />
+                <InviteImage src={flowerImage} alt="" className="absolute top-0 right-0 w-[40vw] max-w-[500px] opacity-[0.5] translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+                <InviteImage src={flowerImage} alt="" className="absolute bottom-16 left-1/2 w-[38vw] max-w-[360px] opacity-[0.45] -translate-x-1/2 pointer-events-none" />
 
                 <div className="container mx-auto px-4 max-w-4xl text-center relative z-10 w-full">
                   <motion.div
@@ -1127,7 +1129,7 @@ export default function WeddingInvitation() {
                         Thank You
                       </div>
                       <p className="text-[9px] md:text-[11px] uppercase tracking-[0.8em] text-theme-600 font-bold relative z-10 bg-[#FFFFFF] px-6 py-2 rounded-full border border-theme-100/50 shadow-sm">With Love</p>
-                      <h3 className="font-playball text-[3.2rem] sm:text-6xl md:text-8xl text-theme-900 relative z-10 drop-shadow-sm px-4 pt-4 leading-none">Navin & Chavindri</h3>
+                      <h3 className="font-playball text-[3.2rem] sm:text-6xl md:text-8xl text-theme-900 relative z-10 drop-shadow-sm px-4 pt-4 leading-none">Chavindri & Navin</h3>
 
                     </div>
                   </motion.div>
@@ -1137,7 +1139,7 @@ export default function WeddingInvitation() {
               {/* Footer */}
               <footer className="py-20 border-t border-theme-200/30 text-center relative z-10 space-y-6">
                 <p className="text-[9px] md:text-[11px] uppercase tracking-[0.5em] text-stone-500 font-bold">
-                  © 2026 Navin & Chavindri. All rights reserved.
+                  © 2026 Chavindri & Navin. All rights reserved.
                 </p>
 
                 <div className="flex flex-col items-center gap-2 pt-8">

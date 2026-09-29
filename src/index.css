@@ -82,8 +82,8 @@ html, body {
 }
 
 .mandala-frame {
-  --mandala-accent-opacity: 0.38;
-  --mandala-soft-opacity: 0.16;
+  --mandala-accent-opacity: 0.85;
+  --mandala-soft-opacity: 0.5;
 }
 
 .mandala-corner {
@@ -103,10 +103,7 @@ html, body {
   object-fit: contain;
 }
 
-/* Make silver orchids gold to match the new theme */
-img[src*="silver_orchid"] {
-  filter: sepia(100%) saturate(350%) hue-rotate(5deg) brightness(1.2) contrast(1.1);
-}
+
 
 .mandala-corner-tr {
   top: -11%;
@@ -140,7 +137,7 @@ img[src*="silver_orchid"] {
 }
 
 .section-floral-overlay {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .section-floral-overlay::before {
@@ -229,7 +226,7 @@ img[src*="silver_orchid"] {
   }
 
   .section-floral-overlay {
-    opacity: 0.6;
+    opacity: 1;
   }
 
   .cv-auto {
