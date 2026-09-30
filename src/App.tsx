@@ -336,7 +336,7 @@ export default function WeddingInvitation() {
           >
             {/* Full Background Image */}
             <div
-              className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: "url('/ChatGPT Image Sep 24, 2026, 04_07_19 PM.png')" }}
             />
 
@@ -373,7 +373,7 @@ export default function WeddingInvitation() {
                   muted
                   playsInline
                   onEnded={openInvitation}
-                  className="w-full h-full object-contain mix-blend-darken"
+                  className="w-full h-full object-cover mix-blend-darken"
                   src="/Use_the_uploaded_202604161807.mp4"
                 />
                 {/* Colorful Frame for the strip */}
@@ -439,7 +439,7 @@ export default function WeddingInvitation() {
 
             {/* Hero Section */}
             <section
-              className="min-h-[100dvh] w-full flex items-center justify-center p-4 md:p-12 relative overflow-hidden bg-center bg-contain bg-no-repeat"
+              className="min-h-[100dvh] w-full flex items-center justify-center p-4 md:p-12 relative overflow-hidden bg-center bg-cover"
               style={{ backgroundImage: "url('/ChatGPT Image Aug 29, 2026, 04_06_21 AM.png')" }}
             >
               {/* Background texture (optional, keep for effect) */}
@@ -965,7 +965,7 @@ export default function WeddingInvitation() {
                       <img
                         src="/Screenshot 2026-09-24 154151.png"
                         loading="lazy"
-                        className="w-full h-full object-contain hover:scale-105 transition-all duration-1000"
+                        className="w-full h-full object-cover hover:scale-105 transition-all duration-1000"
                         alt="Paradise Inn Bolgoda"
                       />
                     </div>
