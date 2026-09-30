@@ -205,7 +205,7 @@ function CountdownTimer() {
   );
 }
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwM3r0YQsD1bv065C3imknuKVvQCWtQLy3CTycQCRlZ8UhUUA2npwvbPVL91OV3E2zp/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwht9dAdem8j9qFHtLKQsI0w9YM9gQj_pNVXZj9mZaPjlqcW6WNJjhU5n1iTjNb0QLPyQ/exec";
 
 export default function WeddingInvitation() {
   const [isOpened, setIsOpened] = useState(false);
@@ -219,7 +219,7 @@ export default function WeddingInvitation() {
   const hasGuest = guestPrefix && guestName;
 
   // Form State
-  const [rsvpData, setRsvpData] = useState({ name: guestName || "", guests: "1", dietary: "" });
+  const [rsvpData, setRsvpData] = useState({ name: guestName || "", guests: "1", attendance: "Accept" });
   const [wishData, setWishData] = useState({ name: guestName || "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<null | "rsvp_success" | "wish_success" | "error">(null);
@@ -241,7 +241,7 @@ export default function WeddingInvitation() {
       const fieldMapping: Record<string, string> = {
         name: "Name",
         guests: "Guests",
-        dietary: "Dietary Notes",
+        attendance: "Attendance",
         message: "Message"
       };
 
@@ -262,7 +262,7 @@ export default function WeddingInvitation() {
       setSubmitStatus(`${formName}_success` as any);
 
       // Reset forms
-      if (formName === "rsvp") setRsvpData({ name: guestName || "", guests: "1", dietary: "" });
+      if (formName === "rsvp") setRsvpData({ name: guestName || "", guests: "1", attendance: "Accept" });
       else setWishData({ name: guestName || "", message: "" });
 
     } catch (error) {
@@ -335,9 +335,9 @@ export default function WeddingInvitation() {
             className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-stone-900 overflow-hidden"
           >
             {/* Full Background Image */}
-            <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-              style={{ backgroundImage: "url('/ChatGPT Image Sep 24, 2026, 04_07_19 PM.png')" }} 
+            <div
+              className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+              style={{ backgroundImage: "url('/ChatGPT Image Sep 24, 2026, 04_07_19 PM.png')" }}
             />
 
             <motion.div
@@ -373,7 +373,7 @@ export default function WeddingInvitation() {
                   muted
                   playsInline
                   onEnded={openInvitation}
-                  className="w-full h-full object-cover mix-blend-darken"
+                  className="w-full h-full object-contain mix-blend-darken"
                   src="/Use_the_uploaded_202604161807.mp4"
                 />
                 {/* Colorful Frame for the strip */}
@@ -438,8 +438,8 @@ export default function WeddingInvitation() {
             </motion.button>
 
             {/* Hero Section */}
-            <section 
-              className="min-h-[100dvh] w-full flex items-center justify-center p-4 md:p-12 relative overflow-hidden bg-center bg-cover"
+            <section
+              className="min-h-[100dvh] w-full flex items-center justify-center p-4 md:p-12 relative overflow-hidden bg-center bg-contain bg-no-repeat"
               style={{ backgroundImage: "url('/ChatGPT Image Aug 29, 2026, 04_06_21 AM.png')" }}
             >
               {/* Background texture (optional, keep for effect) */}
@@ -543,9 +543,9 @@ export default function WeddingInvitation() {
             <section className="cv-auto py-20 bg-[#FFFFFF] relative flex flex-col items-center overflow-hidden">
               {/* Background texture */}
               <div className="absolute inset-0 opacity-[0.03] paper-grain pointer-events-none" />
-              
+
               <div className="container mx-auto px-4 max-w-4xl relative z-10 flex flex-col items-center">
-                
+
                 {/* Header */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -559,13 +559,13 @@ export default function WeddingInvitation() {
                     <div className="w-1.5 h-1.5 rotate-45 bg-theme-400" />
                     <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-theme-300" />
                   </div>
-                  
+
                   <p className="text-[14px] md:text-base font-serif tracking-[0.4em] text-stone-800 mb-2 font-bold uppercase">We Are</p>
                   <h2 className="font-playball text-[4rem] sm:text-[5rem] md:text-[6.5rem] text-theme-500 leading-none drop-shadow-sm mb-6 -mt-2">Getting Married</h2>
                 </motion.div>
 
                 <div className="flex flex-col gap-12 md:gap-16 w-full max-w-2xl px-2">
-                  
+
                   {/* Timeline Item 1 */}
                   <motion.div
                     initial={{ opacity: 0, x: -30 }}
@@ -575,10 +575,11 @@ export default function WeddingInvitation() {
                   >
                     <div className="w-1/2 flex justify-end">
                       <div className="relative w-full aspect-[3/4] max-w-[240px]">
-                        <img 
-                          src="/WhatsApp Image 2026-09-24 at 15.43.28.jpeg" 
-                          alt="Once upon a time" 
-                          className="w-full h-full object-cover rounded-t-full"
+                        <img
+                          src="/WhatsApp Image 2026-09-24 at 15.43.28.jpeg"
+                          alt="Once upon a time"
+                          loading="lazy"
+                          className="w-full h-full object-cover object-top rounded-t-full"
                           style={{
                             WebkitMaskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)',
                             maskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)'
@@ -604,10 +605,11 @@ export default function WeddingInvitation() {
                   >
                     <div className="w-1/2 flex justify-end">
                       <div className="relative w-full aspect-[3/4] max-w-[240px]">
-                        <img 
-                          src="/WhatsApp Image 2026-09-24 at 15.44.27.jpeg" 
-                          alt="The Journey Brought Us Here" 
-                          className="w-full h-full object-cover rounded-t-full"
+                        <img
+                          src="/WhatsApp Image 2026-09-24 at 15.44.27.jpeg"
+                          alt="The Journey Brought Us Here"
+                          loading="lazy"
+                          className="w-full h-full object-cover object-top rounded-t-full"
                           style={{
                             WebkitMaskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)',
                             maskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)'
@@ -633,10 +635,11 @@ export default function WeddingInvitation() {
                   >
                     <div className="w-1/2 flex justify-end">
                       <div className="relative w-full aspect-[3/4] max-w-[240px]">
-                        <img 
-                          src="/WhatsApp Image 2026-09-24 at 15.44.55.jpeg" 
-                          alt="Forever Starts Now" 
-                          className="w-full h-full object-cover rounded-t-full"
+                        <img
+                          src="/WhatsApp Image 2026-09-24 at 15.44.55.jpeg"
+                          alt="Forever Starts Now"
+                          loading="lazy"
+                          className="w-full h-full object-cover object-top rounded-t-full"
                           style={{
                             WebkitMaskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)',
                             maskImage: 'linear-gradient(to bottom, black 65%, transparent 100%)'
@@ -690,15 +693,19 @@ export default function WeddingInvitation() {
                       Wedding Celebration
                     </span>
                     {hasGuest && (
-                      <span className="block text-[31px] md:text-4xl font-playball text-theme-700 mb-8 capitalize tracking-wide drop-shadow-sm">
-                        {guestPrefix.toLowerCase() === 'dear' ? `Dear ${guestName},` : `Dear ${guestPrefix} ${guestName},`}
+                      <span className="block font-serif text-[21px] md:text-2xl leading-[1.8] md:leading-loose text-zinc-700 font-light italic mb-8">
+                        We cordially invite
+                        <span className="font-playball text-[38px] md:text-[48px] text-theme-800 not-italic drop-shadow-sm leading-[1.2] block my-4 md:my-6">{guestPrefix === 'Family' ? `${guestName} and Family` : (guestPrefix === 'Dear' ? guestName : `${guestPrefix} ${guestName}`)}</span>
+                        to celebrate our special day with us.
                       </span>
                     )}
-                    <p className="font-serif text-[21px] md:text-2xl leading-[1.8] md:leading-loose text-zinc-700 font-light italic">
-                      You are cordially invited to
-                      <br className="hidden md:block" />
-                      <span className="text-theme-700 font-medium block mt-2 md:mt-0 md:inline"> celebrate the union of</span>
-                    </p>
+                    {!hasGuest && (
+                      <p className="font-serif text-[21px] md:text-2xl leading-[1.8] md:leading-loose text-zinc-700 font-light italic mb-8">
+                        You are cordially invited to
+                        <br className="hidden md:block" />
+                        <span className="text-theme-700 font-medium block mt-2 md:mt-0 md:inline"> celebrate the union of</span>
+                      </p>
+                    )}
                   </div>
                   <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-theme-400 to-transparent mt-8 md:mt-10 shadow-[0_0_10px_rgba(192,192,192,0.3)]" />
                 </motion.div>
@@ -909,7 +916,7 @@ export default function WeddingInvitation() {
                         <span className="text-theme-600 font-bold uppercase tracking-[0.4em] text-[9px] md:text-[11px]">The Venue</span>
                       </div>
                       <h2 className="font-cinzel text-[2.5rem] sm:text-[3rem] md:text-[4.5rem] text-theme-900 leading-[1] drop-shadow-sm ml-[-4px] uppercase tracking-[0.15em] font-bold">
-                        Paradise Inn Bolgoda
+                        <span className="whitespace-nowrap">Paradise Inn</span><br />Bolgoda
                       </h2>
                       <p className="font-playball text-[1.5rem] sm:text-[1.8rem] md:text-[2.5rem] text-theme-600 italic leading-[1.2] ml-[-2px]">
                         Crystal Atrium
@@ -957,7 +964,8 @@ export default function WeddingInvitation() {
                     <div className="absolute inset-0 w-full h-full scale-[1.2] group-hover:scale-[1.15] transition-transform duration-[2s]">
                       <img
                         src="/Screenshot 2026-09-24 154151.png"
-                        className="w-full h-full object-cover hover:scale-105 transition-all duration-1000"
+                        loading="lazy"
+                        className="w-full h-full object-contain hover:scale-105 transition-all duration-1000"
                         alt="Paradise Inn Bolgoda"
                       />
                     </div>
@@ -1015,18 +1023,15 @@ export default function WeddingInvitation() {
                       </div>
 
                       <div className="space-y-3">
-                        <label className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-theme-200 ml-2">Guests</label>
+                        <label className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-theme-200 ml-2">Attendance</label>
                         <div className="relative">
                           <select
-                            value={rsvpData.guests}
-                            onChange={(e) => setRsvpData({ ...rsvpData, guests: e.target.value })}
+                            value={rsvpData.attendance}
+                            onChange={(e) => setRsvpData({ ...rsvpData, attendance: e.target.value })}
                             className="w-full bg-transparent border-b border-white/20 px-2 py-3 text-white focus:outline-none focus:border-theme-300 transition-colors font-cinzel text-[19px] md:text-xl tracking-wide appearance-none cursor-pointer"
                           >
-                            <option value="1" className="bg-[#18181B] text-white">1 Guest (Just Me)</option>
-                            <option value="2" className="bg-[#18181B] text-white">2 Guests</option>
-                            <option value="3" className="bg-[#18181B] text-white">3 Guests</option>
-                            <option value="4" className="bg-[#18181B] text-white">4 Guests</option>
-                            <option value="0" className="bg-[#18181B] text-theme-300">Regretfully Decline</option>
+                            <option value="Accept" className="bg-[#18181B] text-white">Accept with Pleasure</option>
+                            <option value="Declined" className="bg-[#18181B] text-white">Decline with Regret</option>
                           </select>
                           <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
                             <div className="w-2 h-2 border-r border-b border-theme-300 rotate-45 transform -translate-y-[25%]" />
@@ -1034,16 +1039,26 @@ export default function WeddingInvitation() {
                         </div>
                       </div>
 
-                      <div className="space-y-3">
-                        <label className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-theme-200 ml-2">Dietary Notes</label>
-                        <input
-                          type="text"
-                          value={rsvpData.dietary}
-                          onChange={(e) => setRsvpData({ ...rsvpData, dietary: e.target.value })}
-                          placeholder="Allergies, Vegan, etc."
-                          className="w-full bg-transparent border-b border-white/20 px-2 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-theme-300 transition-colors font-cinzel text-[19px] md:text-xl tracking-wide"
-                        />
-                      </div>
+                      {rsvpData.attendance === 'Accept' && (
+                        <div className="space-y-3">
+                          <label className="text-[8px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-theme-200 ml-2">Guests</label>
+                          <div className="relative">
+                            <select
+                              value={rsvpData.guests}
+                              onChange={(e) => setRsvpData({ ...rsvpData, guests: e.target.value })}
+                              className="w-full bg-transparent border-b border-white/20 px-2 py-3 text-white focus:outline-none focus:border-theme-300 transition-colors font-cinzel text-[19px] md:text-xl tracking-wide appearance-none cursor-pointer"
+                            >
+                              <option value="1" className="bg-[#18181B] text-white">1 Guest (Just Me)</option>
+                              <option value="2" className="bg-[#18181B] text-white">2 Guests</option>
+                              <option value="3" className="bg-[#18181B] text-white">3 Guests</option>
+                              <option value="4" className="bg-[#18181B] text-white">4 Guests</option>
+                            </select>
+                            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                              <div className="w-2 h-2 border-r border-b border-theme-300 rotate-45 transform -translate-y-[25%]" />
+                            </div>
+                          </div>
+                        </div>
+                      )}
 
                       <div className="pt-10">
                         <button
