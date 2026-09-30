@@ -40,7 +40,7 @@ export default function Admin() {
   };
 
   return (
-    <div className="min-h-[100dvh] bg-theme-50 flex flex-col p-4 md:p-8 font-montserrat overflow-y-auto py-8 w-full">
+    <div className="h-[100dvh] bg-theme-50 flex flex-col p-4 md:p-8 font-montserrat overflow-y-auto py-8 w-full">
       <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-theme-200 w-full max-w-2xl mx-auto my-auto shrink-0">
         <h1 className="text-3xl font-cinzel text-theme-900 mb-6 text-center font-bold">Invitation Link Generator</h1>
         
